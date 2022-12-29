@@ -25,6 +25,10 @@
               "src/assets"
             ],
             "styles": [
+              {  
+                "input": "node_modules/tailwindcss/tailwind.css",
+                "bundleName": "tailwind"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +91,10 @@
               "src/assets"
             ],
             "styles": [
+              {  
+                "input": "node_modules/tailwindcss/tailwind.css",
+                "bundleName": "tailwind"
+              },
               "src/styles.css"
             ],
             "scripts": []
