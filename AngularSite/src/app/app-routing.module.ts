@@ -5,7 +5,7 @@ import { JokesComponent } from './jokes/jokes.component';
 import { CatsComponent } from './cats/cats.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: '', redirectTo: '/cats', pathMatch: 'full' },
   { path: 'jokes', component: JokesComponent },
   { path: 'cats', component: CatsComponent },
   { path: 'about', component: AboutComponent }
