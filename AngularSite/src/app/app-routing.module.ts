@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { NewsComponent } from './news/news.component';
-import { WeatherComponent } from './weather/weather.component';
+import { JokesComponent } from './jokes/jokes.component';
+import { CatsComponent } from './cats/cats.component';
 
 const routes: Routes = [
-  { path: '', component: AboutComponent },
-  { path: 'weather', component: WeatherComponent },
-  { path: 'news', component: NewsComponent },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'jokes', component: JokesComponent },
+  { path: 'cats', component: CatsComponent },
   { path: 'about', component: AboutComponent }
 ];
 

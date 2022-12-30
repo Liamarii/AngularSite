@@ -1,0 +1,12 @@
+<div *ngIf="showPage">
+    <div class="bg-green-500 p-4 m-4 text-center">
+        <div>
+            <span class="text-lg">Joke:</span>
+        </div>
+            <p>{{data?.setup}}</p>
+            <p>{{data?.punchline}}</p>
+        <div>
+            <button class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800" (click)="GetJoke()">Get another</button>
+        </div>
+    </div>
+</div>
