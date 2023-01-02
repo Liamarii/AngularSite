@@ -9,7 +9,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class NavigationBarComponent {
   displayMenu = true;
   smallScreen = false;
-  pages = [['about','red-500'],['cats','blue-500'],['jokes','green-500']];
+  pages = ['about','cats','jokes'];
   title = "AngularSite"
 
   ToggleMenuVisibility(){
