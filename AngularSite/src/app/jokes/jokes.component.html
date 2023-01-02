@@ -1,5 +1,5 @@
 <div *ngIf="showPage">
-    <div class="bg-green-500 p-4 m-4 text-center">
+    <div class="bg-green-500 p-4 m-4 text-center rounded-xl">
         <div>
             <span class="text-lg">Joke:</span>
         </div>
@@ -9,7 +9,7 @@
             <button class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800" (click)="GetJoke()">Get another</button>
         </div>
     </div>
-    <div class="px-4 text-white bg-slate-700 w-auto m-4 text-center">
-    This page will wait for a service response before displaying the page without doing a page refresh.
-    </div>
 </div>
+
+<app-footer-bar [message]="'This page will wait for a service response before displaying the page without doing a page refresh.'">
+</app-footer-bar>

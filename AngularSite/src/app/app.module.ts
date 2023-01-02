@@ -8,6 +8,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { AboutComponent } from './about/about.component';
 import { CatsComponent } from './cats/cats.component';
 import { JokesComponent } from './jokes/jokes.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { JokesComponent } from './jokes/jokes.component';
     AboutComponent,
     CatsComponent,
     JokesComponent,
+    FooterBarComponent,
   ],
   imports: [
     BrowserModule,
