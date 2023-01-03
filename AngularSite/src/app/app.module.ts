@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { CatsComponent } from './cats/cats.component';
 import { JokesComponent } from './jokes/jokes.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
+import { TypographyComponent } from './typography/typography.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
     CatsComponent,
     JokesComponent,
     FooterBarComponent,
+    TypographyComponent,
   ],
   imports: [
     BrowserModule,
