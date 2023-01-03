@@ -4,8 +4,7 @@ import { CatFactsService } from '../services/cat-facts.service';
 
 @Component({
   selector: 'app-cats',
-  templateUrl: './cats.component.html',
-  styleUrls: ['./cats.component.css']
+  templateUrl: './cats.component.html'
 })
 
 export class CatsComponent implements OnInit{
