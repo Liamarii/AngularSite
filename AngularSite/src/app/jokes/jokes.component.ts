@@ -5,8 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-jokes',
-  templateUrl: './jokes.component.html',
-  styleUrls: ['./jokes.component.css']
+  templateUrl: './jokes.component.html'
 })
 export class JokesComponent implements OnInit{
   data: any;
