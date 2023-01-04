@@ -28,8 +28,7 @@
               {  
                 "input": "node_modules/tailwindcss/tailwind.css",
                 "bundleName": "tailwind"
-              },
-              "src/styles.css"
+              }
             ],
             "scripts": []
           },
@@ -94,8 +93,7 @@
               {  
                 "input": "node_modules/tailwindcss/tailwind.css",
                 "bundleName": "tailwind"
-              },
-              "src/styles.css"
+              }
             ],
             "scripts": []
           }
