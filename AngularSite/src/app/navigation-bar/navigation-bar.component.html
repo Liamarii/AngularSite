@@ -2,37 +2,55 @@
 </ng-container>
 
 <ng-template #smallDisplay>
-    <div class="flex-shrink-0 text-white mr-6 bg-slate-900 p-8 text-3xl text-center align-middle w-full">
-      <a routerLink="/" (click)="ToggleMenuVisibility()">
-        <h2 class="text-white">{{title}} &#x2630;</h2>
-      </a>
-    </div>
-  <nav class="flex items-center justify-between flex-wrap bg-slate-800 drop-shadow-md">  
-    <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow text-white" *ngIf="displayMenu">
-        <a href="{{pages[0]}}" class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-red-500">{{pages[0] | titlecase}}</a>
-        <a routerLink={{pages[1]}} class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-blue-500">{{pages[1] | titlecase}}</a>
-        <a routerLink={{pages[2]}} class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-green-500">{{pages[2] | titlecase}}</a>
-        <a routerLink={{pages[3]}} class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-orange-500">{{pages[3] | titlecase}}</a>
+  <div class="flex-shrink-0 text-white mr-6 bg-slate-900 p-8 text-3xl text-center align-middle w-full">
+    <a routerLink="/" (click)="ToggleMenuVisibility()">
+      <h2 class="text-white">{{title}} &#x2630;</h2>
+    </a>
+  </div>
+  <nav class="flex items-center justify-between flex-wrap bg-slate-800 drop-shadow-md">
+    <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow text-white"
+      *ngIf="displayMenu">
+      <a href="{{pages[0]}}"
+        class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-orange-500">{{pages[0] |
+        titlecase}}</a>
+      <a routerLink={{pages[1]}}
+        class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-red-500">{{pages[1] |
+        titlecase}}</a>
+      <a routerLink={{pages[2]}}
+        class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-blue-500">{{pages[2] |
+        titlecase}}</a>
+      <a routerLink={{pages[3]}}
+        class="block text-center p-6 border-b-[1px] hover:bg-gradient-to-r from-slate-900 to-green-500">{{pages[3] |
+        titlecase}}</a>
     </div>
   </nav>
 </ng-template>
 
- <ng-template #largeDisplay>
-    <div class="flex items-center justify-between flex-wrap bg-slate-900 p-6">
-      <div class="flex items-center flex-shrink-0 mr-6">
-        <a routerLink="/" class="font-semibold text-xl tracking-tight hover:scale-125 ease-in duration-300 prose">
-            <h2 class="text-white p-0 m-0">{{title}}</h2>
-        </a>
-      </div>
-      <div class="block" (click)="ToggleMenuVisibility()">
+<ng-template #largeDisplay>
+  <div class="flex items-center justify-between flex-wrap bg-slate-900 p-6">
+    <div class="flex items-center flex-shrink-0 mr-6">
+      <a routerLink="/" class="font-semibold text-xl tracking-tight hover:scale-125 ease-in duration-300 prose">
+        <h2 class="text-white p-0 m-0">{{title}}</h2>
+      </a>
     </div>
-  </div>  
-  <nav class="flex items-center justify-between flex-wrap bg-slate-800 drop-shadow-md">  
-    <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow text-white" *ngIf="displayMenu">
-        <a href="{{pages[0]}}" class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-red-500">{{pages[0] | titlecase}}</a>
-        <a routerLink={{pages[1]}} class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-blue-500">{{pages[1] | titlecase}}</a>
-        <a routerLink={{pages[2]}} class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-green-500">{{pages[2] | titlecase}}</a>
-        <a routerLink={{pages[3]}} class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-orange-500">{{pages[3] | titlecase}}</a>
+    <div class="block" (click)="ToggleMenuVisibility()">
+    </div>
+  </div>
+  <nav class="flex items-center justify-between flex-wrap bg-slate-800 drop-shadow-md">
+    <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow text-white"
+      *ngIf="displayMenu">
+      <a href="{{pages[0]}}"
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-orange-500">{{pages[0]
+        | titlecase}}</a>
+      <a routerLink={{pages[1]}}
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-red-500">{{pages[1] |
+        titlecase}}</a>
+      <a routerLink={{pages[2]}}
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-blue-500">{{pages[2]
+        | titlecase}}</a>
+      <a routerLink={{pages[3]}}
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-green-500">{{pages[3]
+        | titlecase}}</a>
     </div>
   </nav>
- </ng-template>
+</ng-template>
