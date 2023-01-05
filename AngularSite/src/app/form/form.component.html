@@ -1,0 +1,74 @@
+<div>
+    <div class="bg-red-400 p-4 m-4 text-center rounded-xl">
+        <div class="text-center align-middle">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()"
+                class="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 w-[80%] m-auto text-left">
+
+                <!-- Forename -->
+                <div class="mb-4" *ngIf="form && form.get('forename')">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="forename">
+                        Validates for alpha characters on submit
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="forename" type="text" placeholder="Forename" pattern="[a-zA-Z]*"
+                        [formControl]="form.get('forename')">
+                    <div class="text-red-500 text-xs italic"
+                        *ngIf="form.get('forename')!.invalid && form.get('forename')!.touched">
+                        Please enter only letters.
+                    </div>
+                </div>
+
+                <!-- Surname -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="surname">
+                        Validates for alpha characters while typing
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="surname" type="text" placeholder="Surname" pattern="[a-zA-Z]*"
+                        [formControl]="form.get('surname')" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+                    <div class="text-red-500 text-xs italic"
+                        *ngIf="form.get('surname')!.invalid && form.get('surname')!.touched">
+                        Please enter only letters.
+                    </div>
+                </div>
+
+                <!-- Age -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+                        Validates that the age is between 10-90 on submit
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="age" type="number" placeholder="Age" required min="10" required max="90"
+                        [formControl]="form.get('age')">
+                    <div class="text-red-500 text-xs italic"
+                        *ngIf="form.get('age')!.invalid && form.get('age')!.touched">
+                        Please enter an age between 10 and 90.
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-4 min-h-fit">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+                        This field has no validation and is optional
+                    </label>
+                    <textarea
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  min-h-[100px]"
+                        id="address" placeholder="Address"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<app-footer-bar [message]="'This page uses a full page refresh as it uses the bad href method'">
+</app-footer-bar>
