@@ -40,10 +40,11 @@
     <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow text-white"
       *ngIf="displayMenu">
       <a href="{{pages[0]}}"
-        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-orange-500">{{pages[0]
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-red-500">{{pages[0]
         | titlecase}}</a>
       <a routerLink={{pages[1]}}
-        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-red-500">{{pages[1] |
+        class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-orange-500">{{pages[1]
+        |
         titlecase}}</a>
       <a routerLink={{pages[2]}}
         class="block text-center p-6 hover:bg-gradient-to-r from-slate-900 to-slate-900 hover:text-blue-500">{{pages[2]
