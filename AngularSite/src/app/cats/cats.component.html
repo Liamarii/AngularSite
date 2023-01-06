@@ -3,14 +3,18 @@
         <div>
             <span class="text-lg">Cat Fact:</span>
         </div>
-            <div>
-                {{data?.fact}}
-            </div>
         <div>
-            <button class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800" (click)="GetFact()">Get another</button>
+            {{data?.fact}}
         </div>
+        <div>
+            <button
+                class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800"
+                (click)="GetFact()">Get another
+            </button>
+        </div>
+        <p highlight [textColour]="'text-red-700'" [backgroundColour]="'bg-yellow-200'">This block of text uses
+            a custom attribute directive</p>
     </div>
 </div>
 <app-footer-bar [message]="'This page will call the service when you view the component without doing a page refresh'">
 </app-footer-bar>
-
