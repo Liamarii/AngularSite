@@ -1,0 +1,21 @@
+<div class="product-page bg-blue-200 p-4 m-4 text-center rounded-xl">
+    <div>
+        <span class="text-lg">Products:</span>
+    </div>
+    <div style="max-width: 300px; margin: 0 auto; display: flex; flex-direction: column;">
+        <button
+            class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800"
+            (click)="selectProduct('bus')">Bus product</button>
+        <button
+            class="bg-slate-700 text-white border-[1px] shadow-lg px-6 py-2 mt-4 text-sm rounded-xl hover:bg-slate-800"
+            (click)="selectProduct('car')">Car product</button>
+    </div>
+    <app-product-image [productName]="selectedProduct"
+        (productFileLocation)="onImageReceived($event)"></app-product-image>
+    <div>
+        <img [src]="productImage" *ngIf="productImage" class="m-auto pt-10">
+    </div>
+</div>
+
+<app-footer-bar [message]="'This page is using a child component to emit the  images.'">
+</app-footer-bar>
