@@ -11,6 +11,8 @@ import { TypographyComponent } from './typography/typography.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
+import { ProductsComponent } from './products/products.component';
+import { ProductImageComponent } from './product-image/product-image.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HighlightDirective } from './directives/highlight.directive';
     FooterBarComponent,
     TypographyComponent,
     FormComponent,
-    HighlightDirective
+    HighlightDirective,
+    ProductsComponent,
+    ProductImageComponent
   ],
   imports: [
     BrowserModule,
