@@ -5,6 +5,7 @@ import { CatsComponent } from './cats/cats.component';
 import { TypographyComponent } from './typography/typography.component';
 import { FormComponent } from './form/form.component';
 import { ErrorsComponent } from './errors/errors.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   { path: '', component: TypographyComponent, pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'form', component: FormComponent },
   { path: 'jokes', component: JokesComponent },
   { path: 'cats', component: CatsComponent },
+  { path: 'products', component: ProductsComponent },
   { path: '**', component: ErrorsComponent }
 ];
 
