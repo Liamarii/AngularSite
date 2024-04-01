@@ -12,6 +12,8 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
 import { ErrorsComponent } from './errors/errors.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductImageComponent } from './product-image/product-image.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ErrorsComponent } from './errors/errors.component';
     TypographyComponent,
     FormComponent,
     HighlightDirective,
+    ProductsComponent,
+    ProductImageComponent,
     ErrorsComponent
   ],
   imports: [
