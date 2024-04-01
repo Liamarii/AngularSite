@@ -1,13 +1,17 @@
 import { describe, expect } from '@jest/globals';
 import { TestBed } from '@angular/core/testing';
 import { FormComponent } from './form.component';
+import { FooterBarComponent } from '../footer-bar/footer-bar.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('MyComponent', () => {
   let component: FormComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FormComponent]
+      imports: [FormsModule, ReactiveFormsModule],
+      declarations: [FormComponent, FooterBarComponent]
     });
 
     const fixture = TestBed.createComponent(FormComponent);
@@ -24,10 +28,9 @@ describe('MyComponent', () => {
   });
 
   it('Form is valid when populated correctly', () => {
-    component.form.forename = 'abc';
-    component.form.surname = 'def';
-    component.form.age = 22;
-    component.form.address = 'ghi';
-    expect(component.form.valid).toBeFalsy();
+    component.form.get('forename')?.setValue('Ralph');
+    component.form.get('surname')?.setValue('Wiggum');
+    component.form.get('age')?.setValue(12);
+    expect(component.form.valid).toBeTruthy();
   });
 });
