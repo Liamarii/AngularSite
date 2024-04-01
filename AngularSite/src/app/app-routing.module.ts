@@ -4,13 +4,15 @@ import { JokesComponent } from './jokes/jokes.component';
 import { CatsComponent } from './cats/cats.component';
 import { TypographyComponent } from './typography/typography.component';
 import { FormComponent } from './form/form.component';
+import { ErrorsComponent } from './errors/errors.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/typography', pathMatch: 'full' },
+  { path: '', component: TypographyComponent, pathMatch: 'full' },
   { path: 'typography', component: TypographyComponent },
   { path: 'form', component: FormComponent },
   { path: 'jokes', component: JokesComponent },
-  { path: 'cats', component: CatsComponent }
+  { path: 'cats', component: CatsComponent },
+  { path: '**', component: ErrorsComponent }
 ];
 
 @NgModule({
