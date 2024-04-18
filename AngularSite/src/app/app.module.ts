@@ -3,33 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { CatsComponent } from './cats/cats.component';
-import { JokesComponent } from './jokes/jokes.component';
-import { FooterBarComponent } from './footer-bar/footer-bar.component';
-import { TypographyComponent } from './typography/typography.component';
-import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HighlightDirective } from './directives/highlight.directive';
-import { ErrorsComponent } from './errors/errors.component';
+import { CatsModule } from './modules/cats/cats.module';
+import { ErrorsModule } from './modules/errors/errors.module';
+import { FormModule } from './modules/form/form.module';
+import { JokesModule } from './modules/jokes/jokes.module';
+import { ProductsModule } from './modules/products/products.module';
+import { TypographyModule } from './modules/typography/typography.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationBarComponent,
-    CatsComponent,
-    JokesComponent,
-    FooterBarComponent,
-    TypographyComponent,
-    FormComponent,
-    HighlightDirective,
-    ErrorsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    CatsModule,
+    ErrorsModule,
+    FormModule,
+    JokesModule,
+    ProductsModule,
+    TypographyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { CatFactsService } from '../services/cat-facts.service';
-import { FooterService } from '../services/footer-service';
-import { CatFact } from '../services/models/cat-fact';
+import { CatFactsService } from '../../services/cat-facts.service';
+import { FooterService } from '../../services/footer-service';
+import { CatFact } from '../../services/models/cat-fact';
 
 @Component({
   selector: 'app-cats',

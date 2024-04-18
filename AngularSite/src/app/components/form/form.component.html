@@ -11,40 +11,38 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="forename" type="text" placeholder="Forename" pattern="[a-zA-Z]*"
-                        [formControl]="form.get('forename')">
-                    <div class="text-red-500 text-xs italic"
-                        *ngIf="form.get('forename')!.invalid && form.get('forename')!.touched">
-                        Please enter only letters.
+                        id="forename" type="text" placeholder="Forename" [formControl]="form.get('forename')"
+                        maxlength="15">
+                    <div class="text-red-500 text-xs italic" *ngIf="forenameInvalid">
+                        Please enter a forename.
                     </div>
                 </div>
 
                 <!-- Surname -->
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="surname">
-                        Validates for alpha characters while typing
+                        Prevents the entry of anything but alpha characters
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="surname" type="text" placeholder="Surname" pattern="[a-zA-Z]*"
-                        [formControl]="form.get('surname')" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+                        id="surname" type="text" placeholder="Surname" [formControl]="form.get('surname')"
+                        onkeydown="return /[a-zA-Z]/i.test(event.key)">
                     <div class="text-red-500 text-xs italic"
-                        *ngIf="form.get('surname')!.invalid && form.get('surname')!.touched">
-                        Please enter only letters.
+                        *ngIf="(form.get('surname').invalid && form.get('surname').touched) || surnameInvalid">
+                        Please enter a surname.
                     </div>
                 </div>
 
                 <!-- Age -->
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
-                        Validates that the age is between 10-90 on submit
+                        Validates that the age is between 10-90 while typing
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="age" type="number" placeholder="Age" required min="10" required max="90"
-                        [formControl]="form.get('age')">
+                        id="age" type="number" placeholder="Age" required [formControl]="form.get('age')">
                     <div class="text-red-500 text-xs italic"
-                        *ngIf="form.get('age')!.invalid && form.get('age')!.touched">
+                        *ngIf="ageInvalid || (form.get('age').invalid && form.get('age').dirty)">
                         Please enter an age between 10 and 90.
                     </div>
                 </div>
@@ -62,11 +60,10 @@
                     <button
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit">
-                        Sign Up
+                        Submit
                     </button>
                 </div>
             </form>
-
         </div>
     </div>
 </div>

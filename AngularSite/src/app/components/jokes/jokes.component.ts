@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { JokesService } from '../services/jokes-service';
-import { FooterService } from '../services/footer-service';
-import { Joke } from '../services/models/joke';
+import { JokesService } from '../../services/jokes-service';
+import { FooterService } from '../../services/footer-service';
+import { Joke } from '../../services/models/joke';
 
 @Component({
   selector: 'app-jokes',
