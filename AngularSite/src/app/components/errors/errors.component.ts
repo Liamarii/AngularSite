@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FooterService } from '../services/footer-service';
+import { FooterService } from '../../services/footer-service';
 
 @Component({
   selector: 'app-errors',
-  templateUrl: './errors.component.html',
-  styleUrls: ['./errors.component.css']
+  templateUrl: './errors.component.html'
 })
 export class ErrorsComponent implements OnInit {
   router: Router;
@@ -15,11 +14,11 @@ export class ErrorsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.footerService.setFooterText('The button is using the built in Angular router to navigate rather than a href')
+    this.footerService.setFooterText('The button is using the built in Angular router to navigate rather than a href, you can also route here by entering an unknown url path')
   }
 
-  goToJokesPage() {
-    this.router.navigate(['/jokes']);
+  goToFormPage() {
+    this.router.navigate(['/form']);
   }
 }
 

@@ -5,10 +5,10 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
 })
-export class NavigationBarComponent {
+export default class NavigationBarComponent {
   displayMenu = true;
   smallScreen = false;
-  pages = ['form', 'typography', 'cats', 'jokes', 'products'];
+  pages = ['form', 'typography', 'cats', 'jokes', 'products', 'error'];
   title = "AngularSite"
 
   ToggleMenuVisibility() {

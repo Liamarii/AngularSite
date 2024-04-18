@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { JokesComponent } from './jokes/jokes.component';
-import { CatsComponent } from './cats/cats.component';
-import { TypographyComponent } from './typography/typography.component';
-import { FormComponent } from './form/form.component';
-import { ErrorsComponent } from './errors/errors.component';
-import { ProductsComponent } from './products/products.component';
+import { JokesComponent } from './components/jokes/jokes.component';
+import { CatsComponent } from './components/cats/cats.component';
+import { TypographyComponent } from './components/typography/typography.component';
+import { FormComponent } from './components/form/form.component';
+import { ErrorsComponent } from './components/errors/errors.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   { path: '', component: TypographyComponent, pathMatch: 'full' },
@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'jokes', component: JokesComponent },
   { path: 'cats', component: CatsComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'error', component: ErrorsComponent },
   { path: '**', component: ErrorsComponent }
 ];
 

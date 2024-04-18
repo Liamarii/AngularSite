@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterService } from '../services/footer-service';
+import { FooterService } from '../../services/footer-service';
 
 @Component({
   selector: 'app-typography',
