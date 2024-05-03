@@ -17,6 +17,6 @@ export class FooterBarComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe(); // Unsubscribe from the subscription to avoid memory leaks
+    this.subscription.unsubscribe();
   }
 }
