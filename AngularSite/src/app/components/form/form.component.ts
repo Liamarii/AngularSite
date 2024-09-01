@@ -24,9 +24,9 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.forenameValid();
-    this.ageValid();
-    this.surnameValid();
+    this.form.controls.forename.status === "INVALID";
+    this.form.controls.surname.status === "INVALID";
+    this.form.controls.age.status === "INVALID";
     if (this.form.valid) {
       alert('Form passed validation!')
     }
@@ -34,17 +34,5 @@ export class FormComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.footerService.setFooterText(this.footerText);
-  }
-
-  forenameValid() {
-    this.forenameInvalid = this.form.controls.forename.status === "INVALID";
-  }
-
-  surnameValid() {
-    this.surnameInvalid = this.form.controls.forename.status === "INVALID";
-  }
-
-  ageValid() {
-    this.ageInvalid = this.form.controls.age.status === "INVALID";
   }
 }
